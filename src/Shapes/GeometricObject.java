@@ -37,6 +37,6 @@ public abstract class GeometricObject {
     public String toString() {
         return (color + " | " + "Is filled? " + filled + " | " + "Date created: " + dateCreated);
     }
-    public abstract double getArea();
+    public abstract double getArea() throws Exception;
     public abstract double getPerimeter();
 }

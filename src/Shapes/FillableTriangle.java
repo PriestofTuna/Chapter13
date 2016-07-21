@@ -17,6 +17,12 @@ public class FillableTriangle extends GeometricObject {
      this(1,2,1);
 
     }
+    public void validSides(FillableTriangle side) throws ArithmeticException {
+        if(side.side1 + side.side2 < side.side3 | side.side1 + side.side3 < side.side2 | side.side2 + side.side3 < side.side1) {
+            throw new ArithmeticException("Not a triangle");
+        }
+
+    }
 
     public double getArea() {
         double hPerim = getPerimeter()/2;
@@ -26,6 +32,7 @@ public class FillableTriangle extends GeometricObject {
     }
     public double getPerimeter() {
         return side1 + side2 + side3;
+        //adds the sides together
     }
     @Override
     public String toString() {
